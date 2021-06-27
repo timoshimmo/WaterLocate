@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user.activitys.UserRegisterActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/Theme.AppCompat.Light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tvUserSignUpTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="45dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/str_new_account"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbSignUp" />
+
+
+    <LinearLayout
+        android:id="@+id/signupForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbSignUp">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etSignUpName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="Obinna Tunde Musa"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/str_name"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/primary"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etUserSignUpEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:autofillHints="user@email.com"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/str_email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/primary"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etUserPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/str_phone_number"
+            android:inputType="phone"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/primary"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etUserSignUpPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/prompt_password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/primary"
+            android:textSize="16sp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lytSignUpBtnContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <Button
+                android:id="@+id/btnUserSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:minHeight="60dip"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/str_create_account"
+                android:textAllCaps="false"
+                android:textSize="17sp"
+                app:backgroundTint="@color/primary"
+                app:cornerRadius="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/pBarSignUp"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvHaveAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto"
+                android:text="@string/str_have_account"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvGoToLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto"
+                android:text="@string/str_login"
+                android:textColor="@color/primary"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

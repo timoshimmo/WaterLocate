@@ -8,8 +8,7 @@
          location permissions for the "MyLocation" functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <!-- Required only when requesting background location access on Android 10 (API level 29). -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Required only when requesting background location access on Android 10 (API level 29). -->
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
     <application
@@ -32,15 +31,30 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <activity android:name=".driver.activitys.DriverHomeActivity" />
         <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps">
+            android:name=".user.activitys.UserHomeActivity"
+            android:label="@string/title_activity_user_home"
+            android:theme="@style/Theme.WaterLocate.NoActionBar" />
+        <activity android:name=".driver.activitys.DriverLoginActivity" />
+        <activity android:name=".driver.activitys.DriverRegistrationActivity" />
+        <activity android:name=".user.activitys.UserRegisterActivity" />
+        <activity android:name=".user.activitys.UserLoginActivity" />
+        <activity android:name=".StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".driver.activitys.MapsActivity"
+            android:label="@string/title_activity_maps" />
     </application>
 
 </manifest>

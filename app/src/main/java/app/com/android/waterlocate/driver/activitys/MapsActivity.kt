@@ -1,4 +1,4 @@
-package app.com.android.waterlocate
+package app.com.android.waterlocate.driver.activitys
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.lifecycle.lifecycleScope
+import app.com.android.waterlocate.R
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory

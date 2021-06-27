@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/driver_navigation"
+    app:startDestination="@id/driverHomeFragment">
+
+    <fragment
+        android:id="@+id/driverHomeFragment"
+        android:name="app.com.android.waterlocate.driver.fragments.home.DriverHomeFragment"
+        android:label="fragment_driver_home"
+        tools:layout="@layout/fragment_driver_home" >
+        <action
+            android:id="@+id/action_driverHomeFragment_to_locateBoreholeFragment"
+            app:destination="@id/locateBoreholeFragment" />
+        <action
+            android:id="@+id/action_driverHomeFragment_to_driverSettingsFragment"
+            app:destination="@id/driverSettingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/locateBoreholeFragment"
+        android:name="app.com.android.waterlocate.driver.fragments.map.LocateBoreholeFragment"
+        android:label="fragment_locate_borehole"
+        tools:layout="@layout/fragment_locate_borehole" />
+    <fragment
+        android:id="@+id/driverSettingsFragment"
+        android:name="app.com.android.waterlocate.driver.fragments.settings.DriverSettingsFragment"
+        android:label="DriverSettingsFragment" />
+</navigation>

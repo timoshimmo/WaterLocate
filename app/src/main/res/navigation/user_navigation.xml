@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="app.com.android.waterlocate.user.fragments.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_user_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_map"
+            app:destination="@id/nav_map" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_map"
+        android:name="app.com.android.waterlocate.user.fragments.map.LocateDriversFragment"
+        android:label=""
+        tools:layout="@layout/fragment_locate_drivers" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="app.com.android.waterlocate.user.fragments.settings.UserSettingsFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+</navigation>
