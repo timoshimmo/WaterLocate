@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "158680413812",
+    "project_id": "watertanker-7c681",
+    "storage_bucket": "watertanker-7c681.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158680413812:android:ee96b31f78ee62ea850321",
+        "android_client_info": {
+          "package_name": "app.com.android.waterlocate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "158680413812-lvt7fbop29pvp0a6klf5gvsl2ql689ka.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdxil_b_IkmTozZVgyzRJcyMWJJkY1DFg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "158680413812-lvt7fbop29pvp0a6klf5gvsl2ql689ka.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

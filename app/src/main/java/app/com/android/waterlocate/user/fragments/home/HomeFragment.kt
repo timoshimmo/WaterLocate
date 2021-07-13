@@ -1,6 +1,7 @@
 package app.com.android.waterlocate.user.fragments.home
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -41,6 +42,8 @@ class HomeFragment : Fragment() {
         val shimmerLayoutNoWater: ShimmerFrameLayout = root.findViewById(R.id.shimmerLayoutNoWater)
 
         val btnOpenMap:CardView = root.findViewById(R.id.crdUserOpenMap)
+        val btnOpenDriverList:CardView = root.findViewById(R.id.crdUserOpenDriverList)
+        val btnOpenSettings:CardView = root.findViewById(R.id.crdUserOpenSettings)
 
         database = Firebase.database.reference
         auth = Firebase.auth
@@ -73,10 +76,12 @@ class HomeFragment : Fragment() {
                     tvFullWaterTankersAmount.text = tankerWater.toString()
                     shimmerFullWater.visibility = View.GONE
                     tvFullWaterTankersAmount.visibility = View.VISIBLE
+                    Log.i("RETRIEVED_ROW", tankerWater.toString())
                 }
                 else {
                     shimmerFullWater.visibility = View.GONE
                     tvFullWaterTankersAmount.visibility = View.VISIBLE
+                    Log.i("RETRIEVED_ROW", tankerWater.toString())
                 }
             }
 
@@ -120,14 +125,26 @@ class HomeFragment : Fragment() {
             openMap()
         }
 
-       /* if(shimmerLayoutNoWater.visibility == View.VISIBLE) {
+        btnOpenDriverList.setOnClickListener {
+            openDriverList()
+        }
 
-        } */
+        btnOpenSettings.setOnClickListener {
+            openUserSettings()
+        }
 
         return root
     }
 
     private fun openMap() {
         findNavController().navigate(R.id.action_nav_home_to_nav_map)
+    }
+
+    private fun openDriverList() {
+        findNavController().navigate(R.id.action_nav_home_to_driverListFragment)
+    }
+
+    private fun openUserSettings() {
+        findNavController().navigate(R.id.action_nav_home_to_nav_user_settings)
     }
 }

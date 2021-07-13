@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/settingsLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_grey"
@@ -10,10 +9,10 @@
     android:paddingTop="40dp"
     android:paddingEnd="30dp"
     android:paddingBottom="40dp"
-    tools:context=".driver.fragments.settings.DriverSettingsFragment">
+    tools:context=".user.fragments.settings.UserSettingsFragment">
 
     <LinearLayout
-        android:id="@+id/lytUserProfileSettings"
+        android:id="@+id/lytProfileSettings"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -22,14 +21,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/userProfileAccordionTitle"
+            android:id="@+id/driverProfileAccordionTitle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white"
             android:padding="15dp">
 
             <TextView
-                android:id="@+id/tvUserSettingsProfileHeader"
+                android:id="@+id/tvDriverSettingsProfileHeader"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
@@ -41,7 +40,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imgUserProfileSettingsArrowDown"
+                android:id="@+id/imgDriverProfileSettingsArrowDown"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/str_drop_down_icon_desc"
@@ -63,7 +62,7 @@
                 android:background="?android:attr/listDivider" />
 
             <LinearLayout
-                android:id="@+id/profileUserForm"
+                android:id="@+id/profileDriverForm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
@@ -78,7 +77,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/etUserProfileName"
+                    android:id="@+id/etDriverProfileName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:autofillHints="Obinna Tunde Musa"
@@ -91,20 +90,20 @@
                     android:textSize="16sp" />
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/etUserProfileEmail"
+                    android:id="@+id/etDriverProfilePhoneNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:ems="10"
                     android:fontFamily="@font/roboto"
-                    android:hint="@string/str_email"
-                    android:inputType="textEmailAddress"
+                    android:hint="@string/str_phone_number"
+                    android:inputType="phone"
                     android:textColor="@color/black"
                     android:textColorHighlight="@color/primary"
                     android:textSize="16sp" />
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/etUserProfilePassword"
+                    android:id="@+id/etDriverProfilePassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -118,13 +117,13 @@
                     android:textSize="16sp" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/lytUserProfileBtnContainer"
+                    android:id="@+id/lytDriverProfileBtnContainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp">
 
                     <Button
-                        android:id="@+id/btnUserProfileUpdate"
+                        android:id="@+id/btnDriverProfileUpdate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto"
@@ -142,7 +141,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ProgressBar
-                        android:id="@+id/pBarUserProfile"
+                        android:id="@+id/pBarDriverProfile"
                         style="?android:attr/progressBarStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -165,17 +164,17 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lytUserProfileSettings">
+        app:layout_constraintTop_toBottomOf="@id/lytProfileSettings">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/userPasswordAccordionTitle"
+            android:id="@+id/driverPasswordAccordionTitle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white"
             android:padding="15dp">
 
             <TextView
-                android:id="@+id/tvUserSettingsPasswordHeader"
+                android:id="@+id/tvDriverSettingsPasswordHeader"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
@@ -187,7 +186,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imgUserProfilePasswordArrowDown"
+                android:id="@+id/imgDriverProfilePasswordArrowDown"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/str_dropdown_icon_desc"
@@ -209,7 +208,7 @@
                 android:background="?android:attr/listDivider" />
 
             <LinearLayout
-                android:id="@+id/profileUserPasswordForm"
+                android:id="@+id/profileDriverPasswordForm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
@@ -224,7 +223,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/etUserSettingsNewPassword"
+                    android:id="@+id/etDriverSettingsNewPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -238,7 +237,7 @@
                     android:textSize="16sp" />
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/etUserSettingsConfirmPassword"
+                    android:id="@+id/etDriverSettingsConfirmPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -252,13 +251,13 @@
                     android:textSize="16sp" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/lytUserPasswordBtnContainer"
+                    android:id="@+id/lytDriverPasswordBtnContainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp">
 
                     <Button
-                        android:id="@+id/btnUserPasswordUpdate"
+                        android:id="@+id/btnDriverPasswordUpdate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto"
@@ -276,7 +275,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ProgressBar
-                        android:id="@+id/pBarUserPassword"
+                        android:id="@+id/pBarDriverPassword"
                         style="?android:attr/progressBarStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

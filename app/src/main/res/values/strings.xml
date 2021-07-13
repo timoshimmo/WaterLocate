@@ -70,5 +70,7 @@
     <string name="str_change_password">Change Password</string>
     <string name="str_dropdown_icon_desc">Dropdown icon for settings</string>
     <string name="str_drop_down_icon_desc">Description for dropdown icon</string>
+    <string name="str_closest_driver_icon_desc">Driver icon to illustrate driver avatar</string>
+    <string name="str_close">close</string>
 
 </resources>

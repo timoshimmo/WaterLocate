@@ -61,6 +61,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="5dp"
             app:cardElevation="4dp">
 
@@ -114,6 +116,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="15dp"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="5dp"
             app:cardElevation="4dp">
 
